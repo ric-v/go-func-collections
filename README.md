@@ -2,6 +2,10 @@
 
 commonly used functions to reduce code bulk
 
+[![Go](https://github.com/ric-v/go-func-collections/actions/workflows/go.yml/badge.svg)](https://github.com/ric-v/go-func-collections/actions/workflows/go.yml)
+[![CodeQL](https://github.com/ric-v/go-func-collections/actions/workflows/codeql.yml/badge.svg)](https://github.com/ric-v/go-func-collections/actions/workflows/codeql.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/ric-v/go-func-collections/badge)](https://www.codefactor.io/repository/github/ric-v/go-func-collections)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ric-v/go-func-collections)](https://goreportcard.com/report/github.com/ric-v/go-func-collections)
 [![GoDoc](https://godoc.org/github.com/narqo/go-badge?status.svg)](https://pkg.go.dev/github.com/ric-v/go-func-collections/array)
 
 ---
