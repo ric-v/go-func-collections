@@ -54,10 +54,18 @@ func Filter[T arrTypes](a []T, f func(T) bool) []T {
 	return b
 }
 
-// RemoveAt removes the first element in the array that equals the searchKey.
-func RemoveAt[T arrTypes](a []T, searchKey T) []T {
+// RemoveElem removes the first element in the array that equals the searchKey.
+func RemoveElem[T arrTypes](a []T, searchKey T) []T {
 	_, i, _ := in(a, searchKey)
 	// check if i is out of bounds
+	if i+1 > len(a) {
+		return a[:i]
+	}
+	return append(a[:i], a[i+1:]...)
+}
+
+// RemoveAt removes the element at the index i.
+func RemoveAt[T arrTypes](a []T, i int) []T {
 	if i+1 > len(a) {
 		return a[:i]
 	}
