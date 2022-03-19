@@ -63,12 +63,75 @@ func somefunc(args ...any) {
 ## Available functions
 
 - **In**: validates if given object is available in the slice
+
+```go
+array.In([]myIntType{1,2,3,4}, 2)
+array.In([]float32{1.1,2,3.2,4.2}, 2)
+...
+```
+
 - **Replace**: replaces an object wit another one at the 1st occurance
+
+```go
+array.Replace([]string{"a", "b", "c"}, "c", "d")
+array.Replace([]complex64{1, 2, 3}, 2, 4)
+...
+```
+
 - **Map**: executes a user defined function over each value in an array
+
+```go
+array.Map([]rune{'a', 'b', 'c'}, func(v rune) rune { return v + 'd' })
+array.Map([]myint16{1, 2, 3}, func(v uintptr) uintptr { return v * 2 })
+...
+```
+
 - **Filter**: returns a filtered array from the input array based on user defined function
+
+```go
+array.Filter([]int16{1, 2, 3}, func(v int16) bool { return v > 1 })
+array.Filter([]rune{'a', 'b', 'c'}, func(v rune) bool { return v == 'b' })
+...
+```
+
 - **Reduce**: returns a reduced value based on the given user defined function
-- **RemoveAt**: removes an object by finding the index
+
+```go
+array.Reduce([]rune{'a', 'b', 'c'}, func(i rune, j rune) rune { return i + j })
+array.Reduce([]uintptr{1, 2, 3}, func(i uintptr, j uintptr) uintptr { return i + j })
+...
+```
+
+- **RemoveElem** removes an element from array
+
+```go
+array.RemoveElem([]float32{1, 2, 3}, 2)
+array.RemoveElem([]byte{'a', 'b', 'c'}, 'c')
+...
+```
+
+- **RemoveAt**: removes an object at given index
+
+```go
+array.RemoveAt([]int16{1, 2, 3}, 1)
+array.RemoveAt([]string{"a", "b", "c"}, 1)
+...
+```
+
 - **InsertAt**: inserts an object at the given index by shifting other values to right
+
+```go
+array.InsertAt([]string{"a", "b", "c"}, 2, "d")
+array.InsertAt([]uintptr{1, 2, 3}, 2, 4)
+...
+```
+
 - **AppendAt**: inserts a slice at given index by shifting other values to right.
+
+```go
+array.AppendAt([]rune{'a', 'b', 'c'}, 1, []rune{'d', 'e'})
+array.AppendAt([]int16{1, 2, 3}, 1, []int16{3, 4})
+...
+```
 
 *Code.Share.Prosper*
